@@ -1,0 +1,16 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Parieur
+  lifeline "Evénement" as evt
+  lifeline "Parier " as parier
+
+  Parieur --> evt "Sélectionner l'événement"
+  activate evt
+
+  evt --> parier "Sélectionne les paramètres de son pari"
+      activate parier
+
+  parier -r-> evt "Confirmer paris"
+
+  evt -r-> Parieur "Confirmation du paris"
+
+}

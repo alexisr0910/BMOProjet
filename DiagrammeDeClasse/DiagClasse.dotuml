@@ -1,0 +1,116 @@
+ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
+
+    abstract class Compte {
+        private idUtilisateur : int
+        private email : string
+        private motDePasse : string
+        public connexion(email: string, motDePasse:string)
+        public inscription(email: string, motDePasse : string)
+        public deconnexion();
+    }
+
+    class Bookmaker extends Compte{
+        private nomBookmaker : string
+        private evenement : Evenement
+        public creerEvenement(evenement : Evenement) : void
+        public modifierEvenement(evenement : Evenement) : void 
+        public supprimerEvenement(evenement : Evenement) : void
+        }
+
+
+    class Parieur extends Compte {
+        private nomParieur : string
+        private jetonSolde : int
+        public recharger(montantJeton : int) : void
+        public soumettreTicket(paris : Paris) : Paris
+    }
+
+    class Evenement {
+        private nomEvenement : string
+        private debutEvenement : date
+        '- private Equipe :  Sport []'
+        private limiteDeGain : int
+        private limiteDeParis : int
+        private coteVictoire : double
+        private coteDefaite : double
+        private coteNul : double
+        private ecartsDeScore : int
+        public verifierDateDebutEvenement(debutEvenement : date):boolean
+        public verifierLimiteDeGain(limiteDeGain : int):boolean
+        public verifierLimiteDeParis(limiteDeParis : int):boolean
+        public ecartsScore(sport : ListeSport):int //un tableau mais ne fonctionne pas
+        public setEcartsDeScore(ecartsDeScore : int):void
+
+    }
+
+    class Sport {
+        private nomSport : string
+        private equipe : string
+        private scoreEquipe : int 
+        public calculIntervalle(interval : int)
+        public getNomEquipe() : string
+        public getNomSport() : string
+        public setScore(score : int)
+
+    }
+
+    abstract class SportCollectif extends Sport {
+            private participant : int 
+            public getParticipant() : int
+    }
+
+    abstract class SportIndividuel extends Sport {
+    }
+
+    class Football {
+        private miTemps1 : int
+        private miTemps2 : int
+    }
+    
+    class Basket {
+        private quartTemps1 : int
+        private quartTemps2 : int
+        private quartTemps3 : int
+        private quartTemps4: int
+    }
+
+    class Tennis {
+        private setMin: int
+        private setMax : int
+    }
+    
+    class Chevaux {
+    }
+
+    class Paris {
+        private evenement : Evenement
+        private montantParis : int
+        private gain : double
+        private nomVainqueur : string
+        private nul : boolean  
+        private ecartsDeScore : int
+        public gainPossible() : double
+    }
+
+    class Avancer {
+        private sportEquipe : Sport 
+        private interval : int
+    }
+
+    Parieur "1 " -- "*" Paris : " Soumettre "
+    Paris "0" -c-> "1" Avancer
+    Paris "1" -- "*" Evenement :"Désigner"
+    Evenement "*" -- "1" Sport :"Choisir"
+    Evenement "*" -- "1" Bookmaker :"Définir"
+    SportCollectif <-r- Football
+    SportCollectif <-r- Basket
+    SportCollectif <-r- Tennis
+    SportIndividuel <-r- Chevaux
+   
+
+    align {
+        SportIndividuel
+        Sport
+    }
+}
+

@@ -1,0 +1,17 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor utilisateur
+  lifeline "Site Paris" as site
+  lifeline "test@test.test : Parieur " as parieur
+
+
+  utilisateur --> site "Inscription('mdp','test@test.test')"
+  activate site
+
+  site -c-> parieur "inscription('test@test.test')"
+
+  parieur -r-> site "ok"
+      activate parieur
+
+  site -r-> utilisateur "inscris"
+
+}
