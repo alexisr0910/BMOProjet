@@ -1,0 +1,12 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor utilisateur
+  lifeline "Site Paris" as site
+  lifeline "Alexis : Parieur " as parieur
+
+  utilisateur --> site "connexion('Alexis','mdp')"
+  activate site
+  site --> parieur "connexion('Alexis')"
+  activate parieur
+  parieur -r-> site "erreur('déja connecté')"
+  site -r-> utilisateur "erreur('déja connecté')"
+}
