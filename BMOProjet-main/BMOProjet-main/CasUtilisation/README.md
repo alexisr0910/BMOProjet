@@ -4,7 +4,7 @@ Dans notre diagramme de cas d'utilisation, nous avons identifié trois acteurs p
 
 ## Acteur : Utilisateur
 
-Le premier acteur est l'utilisateur. Avant de devenir un parieur ou un bookmaker, l'utilisateur est simplement un visiteur du site. Ce dernier a la possibilité de choisir entre deux actions principales : s'inscrire sur la plateforme ou se connecter s'il possède déjà un compte.
+Le premier acteur est l'utilisateur. Avant de devenir un parieur ou un bookmaker, l'utilisateur est simplement un visiteur du site. Ce dernier a la possibilité de choisir entre deux actions principales : s'inscrire sur la plateforme ou se connecter s'il possède déjà un compte.balabalbala
 
 > **Remarque :** Tous les cas d'utilisation nécessitent que l'utilisateur soit connecté.
 
