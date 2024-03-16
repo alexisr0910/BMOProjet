@@ -21,23 +21,23 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     class Parieur extends Compte {
         private nomParieur : string
         private jetonSolde : int
-        '- private paris : Paris []'
+        '- private paris : Paris []'//Une liste et non un tableau mais ne fonctionne pas sous dotUml
         public recharger(montantJeton : int) : void
         public soumettreTicket(paris : Paris) : Paris
     }
 
-    class Evenement {
+    abstract class Evenement {
         private nomEvenement : string
         private debutEvenement : date
-        '- private Equipe :  Sport []'
+        '- private equipes :  Sport []'
         private limiteDeGain : int
         private limiteDeParis : int
-        private cote : Cote
+        private cotes : Cote
         private ecartsDeScore : int
         public verifierDateDebutEvenement(debutEvenement : date):boolean
         public verifierLimiteDeGain(limiteDeGain : int):boolean
         public verifierLimiteDeParis(limiteDeParis : int):boolean
-        public ecartsScore(sport : ListeSport):int //un tableau mais ne fonctionne pas
+        public calculerEcartsScore(sport : ListSport):int //une liste mais ne fonctionne pas
         public setEcartsDeScore(ecartsDeScore : int):void
     }
      class Cote extends Evenement {
@@ -45,23 +45,23 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
         coteNul : double
         coteDefaite : double
         coteEcartsDeScore : double
-        public verifierCote(cote : double):boolean
     }
 
-    class Sport {
+    abstract class Sport {
         private nomSport : string
         private equipe : string
         private scoreEquipe : int 
-        public calculIntervalle(interval : int)
+        public calculIntervalle(interval : int): string
         public getNomEquipe() : string
         public getNomSport() : string
-        public setScore(score : int)
+        public getScoreEquipe() : string
+        public setScore(score : int) : void
 
     }
 
     abstract class SportCollectif extends Sport {
-            private participant : int 
-            public getParticipant() : int
+            private participants : int 
+            public getParticipants() : int
     }
 
     abstract class SportIndividuel extends Sport {
@@ -82,6 +82,8 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     class Tennis {
         private setMin: int
         private setMax : int
+        private jeuxMin: int
+        private jeuxMax : int
     }
     
     class Chevaux {
@@ -89,12 +91,12 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
 
     class Paris {
         private evenement : Evenement
-        private montantParis : int
-        private gain : double
         private nomVainqueur : string
         private nul : boolean  
+        private montantParis : int
+        private gain : double
         private ecartsDeScore : int
-        public gainPossible() : double
+        public gainPossible(cotes: Cote, montantParis: int) : double
     }
 
     class Avancer {
@@ -105,7 +107,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     Parieur "1 " -- "*" Paris : " Soumettre "
     Paris "0" -c-> "1" Avancer
     Paris "1" -- "*" Evenement :"Désigner"
-    Evenement "*" -- "1" Sport :"Choisir"
+    Evenement "*" -- "*" Sport :"Choisir"
     Evenement "*" -- "1" Bookmaker :"Définir"
     SportCollectif <-r- Football
     SportCollectif <-r- Basket
