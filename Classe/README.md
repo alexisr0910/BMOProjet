@@ -79,7 +79,7 @@ La classe `Cote` étend la classe `Evenement` et représente les cotes associée
 - `coteNul` : (Type : `double`) - La cote associée au match nul.
 - `coteDefaite` : (Type : `double`) - La cote associée à la défaite.
 - `coteEcartsDeScore` : (Type : `double`) - La cote associée aux écarts de score.
-- Autres cotes que l'on pourrait décider.
+- Autres cotes que l'on pourrait décider. Par exemple, si la personne décide de faire un paris avancer, de nouvelle cote seront définis pour ce paris avancer car le parieur prend plus de risque.
 
 ---
 <h1 style="color: #AADA9A">Classe Sport</h1>
@@ -171,7 +171,7 @@ La classe `Paris` représente un pari associé à un événement sportif. Un par
 - `nul` : (Type : `boolean`) - Indique si le match est nul. Cet attribut est optionnel. Si l'utilisateur décide qu'il y aura une équipe gagnante et une équipe perdante, dans ce cas, il ne prendra pas en compte le match nul et vice-versa.
 - `montantParis` : (Type : `int`) - Le montant du pari.
 - `gain` : (Type : `double`) - Le gain potentiel du pari. Plusieurs gains pourront être affichés en fonction du nombre de cotes décidées.
-- `ecartsDeScore` : (Type : `int`) - Les écarts de score dans le pari.
+- `ecartsDeScore` : (Type : `int`) - Les écarts de score dans le pari. Cette attribut est optionnel
 
 ## Méthodes
 - `gainPossible(cote: Cote, montantParis: int) : double` : Cette méthode calcule les gains potentiels du pari en fonction des différentes cotes.
@@ -184,7 +184,7 @@ La classe `Avancer` représente un type spécifique de pari avancé, qui offre d
 
 ## Attributs
 - `sportEquipe` : (Type : `Sport`) - Permet de spécifier les scores de l'équipe sélectionnée dans l'événement sportif. Il offre la possibilité de définir un score pour une équipe à un intervalle donné.
-- `interval` : (Type : `int`) - Représente l'intervalle de temps ou de jeu auquel le parieur souhaite placer son pari sur le score d'un match.
+- `interval` : (Type : `int`) - Représente l'intervalle de temps ou de jeu auquel le parieur souhaite placer son pari sur le score d'un match. Si le parieur décide de remplir ce champs, cela veut dire que les données rentré dans sportEquipe seront comptabilisé seulement dans l'interval et cela sera la source du paris. 
 
 
 ## Relation Classe Compte

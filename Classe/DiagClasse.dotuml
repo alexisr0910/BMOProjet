@@ -11,7 +11,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
 
     class Bookmaker extends Compte{
         private nomBookmaker : string
-        '- private evenement : Evenement []'
+        '- evenement : Evenement []'
         public creerEvenement(evenement : Evenement) : void
         public modifierEvenement(evenement : Evenement) : void 
         public supprimerEvenement(evenement : Evenement) : void
@@ -21,7 +21,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     class Parieur extends Compte {
         private nomParieur : string
         private jetonSolde : int
-        '- private paris : Paris []'//Une liste et non un tableau mais ne fonctionne pas sous dotUml
+        '- paris : Paris []'//Une liste et non un tableau mais ne fonctionne pas sous dotUml
         public recharger(montantJeton : int) : void
         public soumettreTicket(paris : Paris) : Paris
     }
@@ -29,7 +29,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     abstract class Evenement {
         private nomEvenement : string
         private debutEvenement : date
-        '- private equipes :  Sport []'
+        '- equipes :  Sport []'
         private limiteDeGain : int
         private limiteDeParis : int
         private cotes : Cote
@@ -41,10 +41,10 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
         public setEcartsDeScore(ecartsDeScore : int):void
     }
      class Cote extends Evenement {
-        coteVictoire : double
-        coteNul : double
-        coteDefaite : double
-        coteEcartsDeScore : double
+        private coteVictoire : double
+        private coteNul : double
+        private coteDefaite : double
+        private coteEcartsDeScore : double
     }
 
     abstract class Sport {
