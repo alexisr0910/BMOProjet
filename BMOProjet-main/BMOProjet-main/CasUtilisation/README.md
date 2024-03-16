@@ -10,7 +10,7 @@ Le premier acteur est l'utilisateur. Avant de devenir un parieur ou un bookmaker
 
 ## Acteur : Parieur
 
-Une fois connecté, l'utilisateur est de base un parieur. En tant que parieur, il a accès à deux fonctionnalités principales :
+Une fois connecté , l'utilisateur est de base un parieur. En tant que parieur, il a accès à deux fonctionnalités principales :
 - **Parier sur un événement sportif :** Le parieur peut placer des paris sur les événements sportifs disponibles sur la plateforme en choisissant ses prédictions et en spécifiant le montant de son pari.
 - **Recharger ses jetons :** Le parieur a également la possibilité de recharger son solde de jetons pour pouvoir continuer à placer des paris.
 
