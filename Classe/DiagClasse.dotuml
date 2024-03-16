@@ -27,6 +27,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Diagramme de classe"] {
     }
 
     abstract class Evenement {
+    
         private nomEvenement : string
         private debutEvenement : date
         '- equipes :  Sport []'
