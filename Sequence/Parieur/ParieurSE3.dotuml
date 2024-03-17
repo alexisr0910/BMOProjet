@@ -1,0 +1,29 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Parieur
+  lifeline ": Parier " as parier
+  lifeline ": Evénement" as evenement
+  
+ 
+   Parieur --> parier "Faire un paris"
+  activate parier
+  parier --> evenement "Sélectionner un événement"
+  activate evenement
+  parier <-r- evenement "Affiche les paramètres de l'événement"
+  parier -r-> Parieur "Formulaire de paris"
+  Parieur --> parier "Entre les paramètres de son paris"
+  Parieur --> parier "Entre le montant du paris"
+  parier -r-> evenement "Vérifie montant possible"
+  evenement -r-> parier "Confirmation du montant possible"
+  evenement -r-> parier "Montant trop élevé par rapport au gain possible" 
+  parier -r-> Parieur "Montant possible"
+  parier --> Parieur "Propose au parieur de mettre un montant plus faible"
+    Parieur --> parier "Entre le montant du paris"
+  parier -r-> evenement "Vérifie montant possible"
+  evenement -r-> parier "Confirmation du montant possible"
+  Parieur --> parier "Soumettre le ticket du paris"
+  parier -r-> evenement "Confirmation du paris"
+  evenement -r-> parier "Paris confirmé"
+  parier -r-> Parieur "Paris joué"
+  deactivate evenement
+  deactivate parier
+}

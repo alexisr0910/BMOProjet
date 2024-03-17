@@ -3,7 +3,7 @@
 
 # Evenement.dotuml
 
-Dans le fichier Evenement.dotuml, nous présentons un diagramme d'objet représentant un événement sportif sur notre plateforme de paris en ligne.
+Dans le fichier Evenement.dotuml, nous présentons un diagramme d'objet représentant un événement sportif sur notre plateforme de paris en ligne. 
 
 ---
 
@@ -41,6 +41,7 @@ Ces diagrammes représentent des instances de paris sur notre plateforme de pari
 
 - ### Diagramme Paris1
 Ce diagramme illustre un exemple de paris sur un match de l'Europa League. Dans ce cas, le parieur a misé sur la victoire de l'équipe Rennes avec un montant de 1000 jetons. En cas de victoire de Rennes, le parieur remporterait 1200 unités, tandis qu'en cas de défaite, il remporterait 700 unités. De plus, le parieur à fais un paris avancé et à décider que Rennes à un score de 3 et PSG 2.
+Les différentes cotes du paris sont affiche en fonction du choix du parieur. Si il décide de parier sur un match nul, il verra s'afficher que la cote du match nul.
 
 - ### Diagramme Paris2
 Ce diagramme représente un exemple de paris sur un match de l'Europa League avec une possibilité de match nul. Le parieur a misé un montant de 1000 unités sur le résultat nul du match. En cas de match nul, le parieur remporterait 1900 unités.
