@@ -1,0 +1,23 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Bookmaker
+  lifeline ": Evénement" as evenement
+  lifeline ": Sport " as sport
+  
+    Bookmaker --> evenement  "Créer un événement"
+    evenement --> sport  "Sélectionner un sport"
+    sport -r-> evenement  "Affiche les paramètres du sport"
+    evenement -r-> Bookmaker  "Affiche le formulaire de l'événement"
+    Bookmaker --> evenement  "Entre le nom de l'événement"
+    Bookmaker <-r- evenement  "Cette événement n'existe pas, vous pouvez continuer"
+    Bookmaker --> evenement  "Entre la date de l'événement"
+    Bookmaker <-r- evenement  "la date spécifiée est passée, veuillez donnée une date valide"
+    Bookmaker --> evenement  "Entre une nouvelle date d'événement"
+    Bookmaker <-r- evenement  "la date spécifiée est valide, vous pouvez continuer"
+    Bookmaker --> evenement  "Sélectionnes les différentes équipes"
+    Bookmaker --> evenement  "Entre les paramètres des équipes"
+    Bookmaker --> evenement  "Entre les limites de paris"
+    Bookmaker --> evenement  "Définis les cotes"
+    Bookmaker --> evenement  "Confirme l'événement"
+    evenement -r-> Bookmaker  "Evenement créé"
+ 
+}

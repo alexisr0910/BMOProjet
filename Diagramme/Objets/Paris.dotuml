@@ -1,0 +1,24 @@
+ClassDiagram [frame=true framecolor=steelblue label="Diagramme d'objet" ] {
+
+    class Paris1 {
+        ' evenement : Match Europa League '
+        ' nomVainqueur : Rennes '
+        ' montantParis : 1 000'
+        ' gainVictoire : 1200'
+        ' gainDefaite : 700'
+        ' equipe : Rennes'
+        ' socre : 3'
+        ' equipe : PSG'
+        ' score : 2'
+    }
+
+     class Paris2 {
+        ' evenement : Match Europa League '
+        ' nul : vrai '
+        ' montantParis : 1 000'
+        ' gainNul : 1900'
+    }
+
+    
+
+}

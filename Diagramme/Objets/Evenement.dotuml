@@ -1,0 +1,49 @@
+ClassDiagram [frame=true framecolor=steelblue label="Diagramme d'objet" ] {
+
+     class Evenement {
+        ' nomEvenement : Match Europa League '
+        ' debutEvenement : 15/04/2024 '
+        ' limiteDeGain : 10 000 '
+        ' limiteDeParis : 7 000 '
+        ' ecartsDeScore : 2 '
+    }
+     class Cote {
+        ' coteVictoire : 1,2 '
+        ' coteNul : 1,7 ' 
+        ' coteDefaite : 1,9 '
+        ' coteEcartsDeScore : 2,3 '
+
+    }
+
+     class Sport1 {
+        ' nomSport : Football '
+        ' equipe : Rennes '
+        ' scoreEquipe : 0 '
+
+    }
+
+     class Sport2 {
+        ' nomSport : Football '
+        ' equipe : PSG '
+        ' scoreEquipe : 0 '
+
+    }
+
+     class SportCollectif1 {
+            ' participants : 22 '
+    }
+
+     class SportCollectif2  {
+            ' participants : 21 '
+    }
+
+
+    Evenement " " -- "" Sport1 : " "
+    Evenement " " -- "" Sport2 : " "
+    Sport1 " " -- "" SportCollectif1 : " "
+    Sport2 " " -- "" SportCollectif2 : " "
+    Evenement " " -- "" Cote : " "
+
+
+
+}
