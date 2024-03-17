@@ -4,7 +4,7 @@
 <h1 style="color: #AADA9A">Classe Compte</h1>
 
 ## Description
-La classe `Compte` permet à un utilisateur de se connecter en tant que parieur ou bookmaker.
+La classe `Compte` permet à un utilisateur de se connecter en tant que parieur ou bookmaker. Nous avons créer cette classe qui est en commun entre parieur et bookmaker. Ce choix est du au fait que un parieur et un boomaker, malgré le fait qu'ils ont 2 rôle différent, doivent se connecter au site.
 
 ## Attributs
 - `idUtilisateur` : (Type : `int`) - L'identifiant utilisateur permet d'avoir un identifiant unique pour chaque utilisateur.
@@ -72,7 +72,7 @@ La classe `Evenement` représente un événement sportif.
 <h1 style="color: #AADA9A">Classe Cote</h1>
 
 ## Description
-La classe `Cote` étend la classe `Evenement` et représente les cotes associées à un événement. Des cotes sont rajoutées si le bookmaker le souhaite.
+La classe `Cote` étend la classe `Evenement` et représente les cotes associées à un événement. Des cotes sont rajoutées si le bookmaker le souhaite. Nous avons décidé de crée cette classe pour permettre d'éffectuer autant de cote possible.
 
 ## Attributs
 - `coteVictoire` : (Type : `double`) - La cote associée à la victoire.
@@ -103,7 +103,7 @@ La classe `Sport` représente un sport spécifique associé à un événement.
 <h1 style="color: #AADA9A">Classe SportCollectif</h1>
 
 ## Description
-La classe abstraite `SportCollectif` étend la classe `Sport` et représente un type de sport collectif. Elle contient différentes règles propres à tous les sports collectifs.
+La classe abstraite `SportCollectif` étend la classe `Sport` et représente un type de sport collectif. Elle contient différentes règles propres à tous les sports collectifs. Nous avons décidé de créer cette classe car elle permettait de séparé les sports indivuel et les sports collectif. Et par la même occasion de séparé les règles qui peuvent être propre à un sport individuel ou un sport collectif. 
 
 ## Attributs
 - `participants` : (Type : `int`) - Le nombre de participants dans le sport. Exemple : Une équipe de football possède 22 joueurs. Une équipe de tennis peut avoir une équipe de 2.

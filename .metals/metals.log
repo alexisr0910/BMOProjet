@@ -1,0 +1,37 @@
+2024.03.17 18:18:14 INFO  Started: Metals version 1.2.2+61-f2e80b9c-SNAPSHOT in folders '/Users/alexisraulais/Desktop/BMO/Projet' for client Visual Studio Code 1.74.3.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@2540f0cd]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3cf4d953]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@2540f0cd]
+2024.03.17 18:18:14 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.03.17 18:18:15 WARN  no build tool detected in workspace '/Users/alexisraulais/Desktop/BMO/Projet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2024.03.17 18:18:15 WARN  Build server is not auto-connectable.
+mars 17, 2024 6:18:17 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTrace
+2024.03.17 18:18:20 INFO  Shutting down server
+2024.03.17 18:18:20 INFO  shutting down Metals
+2024.03.17 18:18:21 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.03.17 18:19:14 INFO  no build target found for /Users/alexisraulais/Desktop/BMO/Projet/OpenXava/parisenligne/src/main/java/com/yourcompany/parisenligne/model/Paris.java. Using presentation compiler with project's scala-library version: 3.3.3
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@25df00a0[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 154]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024.03.17 18:19:20 INFO  Started: Metals version 1.2.2+80-b278ef9e-SNAPSHOT in folders '/Users/alexisraulais/Desktop/BMO/Projet' for client Visual Studio Code 1.74.3.
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [scribe.slf4j.ScribeServiceProvider@73be5f77]
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@51d54512]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@73be5f77]
+2024.03.17 18:19:21 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.03.17 18:19:21 WARN  no build tool detected in workspace '/Users/alexisraulais/Desktop/BMO/Projet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2024.03.17 18:19:21 WARN  Build server is not auto-connectable.
