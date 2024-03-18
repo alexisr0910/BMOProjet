@@ -1,20 +1,18 @@
 # Diagramme d'État - Processus d'Événement
 
-Ce diagramme d'état représente le processus d'un paris en ligne.
-### États
+Ce diagramme d'état représente le processus d'un pari en ligne.
 
-- **Attente (attente)** : État initial où l'événement est en attente de démarrage.
-- **En Cours (enCours)** : L'événement est en cours.
-- **Fini (fini)** : L'événement est terminé.
-- **Gagné (gagne)** : Le paris est gagné.
-- **Perdu (perdu)** : Le paris est perdu.
+## États
 
-### Transitions
+- **Parier (parier)** : État initial où le parieur sélectionne un événement.
+- **Evenement (Evenement)** : Le parieur a sélectionné un événement et choisit les paramètres du pari.
+- **Parametre (Parametre)** : Le parieur a sélectionné les paramètres du pari, mais ils sont incorrects.
+- **Final (finalState)** : Le pari est fait.
 
-- **Attente -> En Cours** : L'événement commence.
-- **En Cours -> Fini** : L'événement est terminé.
-- **Fini -> Gagné** : Le paris est considéré comme réussi.
-- **Fini -> Perdu** : Le paris est considéré comme échoué.
-- **Gagné -> État Final** : Le paris réussi amène à l'état final.
-- **Perdu -> État Final** : Le paris échoué amène également à l'état final.
+## Transitions
+
+- **Parier -> Evenement** : Le parieur sélectionne un événement.
+- **Evenement -> Parametre** : Le parieur choisit les paramètres du pari.
+- **Parametre -> Evenement** : Les paramètres du pari sont incorrects.
+- **Parametre -> Final** : Le pari est effectué avec succès.
 
