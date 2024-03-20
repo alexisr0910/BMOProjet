@@ -23,6 +23,4 @@ ___
 ___
 ___
 
-## Utilisation des classes
-Nous avons rencontré des difficultés pour utiliser les classes extends telles que Parieur ou Cote. Par conséquent, nous avons opté pour l'utilisation de relations ou de rien.
 

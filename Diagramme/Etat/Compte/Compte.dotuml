@@ -9,7 +9,7 @@ initialState->AttenteUtilisateur
 AttenteUtilisateur -> Inscription "Utilisateur choisit de s'inscrire"
 AttenteUtilisateur -> Connexion "Utilisateur choisit de se connecter"
 Inscription->AttenteUtilisateur "Inscription échouer"
-Connexion->AttenteUtilisateur "Inscription échouer"
+Connexion->AttenteUtilisateur "Connexion échouer"
 Inscription -> Authentifié "Inscription réussie"
 Connexion -> Authentifié "Connexion réussie"
 Authentifié -> Deconnexion "Utilisateur connecter choisit de se déconnecter"
