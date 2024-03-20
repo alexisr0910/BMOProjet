@@ -1,6 +1,7 @@
 # Application de Paris en Ligne
 
 Pour la création de l'application, nous avons décidé de la présenter du point de vue d'un parieur.
+Nous avons décider de faire une courte vidéo pour vous expliquer le fonctionnement de notre application : https://video.univ-rennes1.fr/permalink/v12689116cff4vigd666/
 
 ## Fonctionnalités
 
