@@ -125,3 +125,4 @@ SLF4J: Actual provider is of type [scribe.slf4j.ScribeServiceProvider@57316256]
 2024.03.20 20:36:02 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
 2024.03.20 20:36:02 WARN  no build tool detected in workspace '/Users/alexisraulais/Desktop/BMO/Projet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2024.03.20 20:36:02 WARN  Build server is not auto-connectable.
+2024.03.20 20:36:12 INFO  no build target found for /Users/alexisraulais/Desktop/BMO/Projet/OpenXava/parisenligne/src/main/java/com/yourcompany/parisenligne/model/Avancer.java. Using presentation compiler with project's scala-library version: 3.3.3
